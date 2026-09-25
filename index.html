@@ -1,1 +1,474 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lojas Nobre (Madenobre Madereira LTDA) - Madeira, artefatos, ferragens, ferramentas e materiais de construção em Dourados/MS. CNPJ: 09.050.294/0001-30">
+    <meta name="keywords" content="madeireira, madeira, ferragens, ferramentas, materiais de construção, Dourados, MS, Lojas Nobre, Madenobre">
+    <title>Lojas Nobre | Madeira, Ferragens e Materiais de Construção em Dourados/MS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Configurações de Cores Personalizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nobre: {
+                            50: '#faf8f5',
+                            100: '#f5f0e8',
+                            200: '#e8ddc9',
+                            300: '#d9c4a3',
+                            400: '#c9a776',
+                            500: '#b88a4f',
+                            600: '#a06e3a',
+                            700: '#855530',
+                            800: '#6b4429',
+                            900: '#573823',
+                        },
+                        madeira: {
+                            50: '#fdf8f3',
+                            100: '#faeee1',
+                            200: '#f4d9c2',
+                            300: '#ecbe98',
+                            400: '#e29d6c',
+                            500: '#d97e4a',
+                            600: '#cb6336',
+                            700: '#a94c2c',
+                            800: '#893e29',
+                            900: '#703525',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(87, 56, 35, 0.75), rgba(87, 56, 35, 0.75)), url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #cb6336;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
 
+    <!-- Header / Navegação -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-tree text-3xl text-nobre-700"></i>
+                <div>
+                    <h1 class="text-2xl font-bold text-nobre-800 leading-tight">Lojas Nobre</h1>
+                    <p class="text-xs text-gray-500">Madeireira & Materiais de Construção</p>
+                </div>
+            </div>
+            
+            <button id="menu-btn" class="md:hidden text-2xl text-nobre-700 focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <ul id="menu" class="hidden md:flex space-x-6 text-nobre-700 font-medium w-full md:w-auto mt-4 md:mt-0">
+                <li><a href="#home" class="hover:text-madeira-600 transition">Início</a></li>
+                <li><a href="#sobre" class="hover:text-madeira-600 transition">Quem Somos</a></li>
+                <li><a href="#produtos" class="hover:text-madeira-600 transition">Produtos</a></li>
+                <li><a href="#contato" class="hover:text-madeira-600 transition">Contato</a></li>
+                <li><a href="#localizacao" class="hover:text-madeira-600 transition">Localização</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-bg h-[500px] flex items-center justify-center text-center text-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Lojas Nobre</h2>
+                <p class="text-xl md:text-2xl mb-8 drop-shadow-md max-w-3xl mx-auto">
+                    Madeira, ferragens, ferramentas e materiais de construção com qualidade e tradição em Dourados/MS.
+                </p>
+                <div class="space-x-4 flex flex-wrap justify-center gap-4">
+                    <a href="tel:+556733511770" class="bg-madeira-600 hover:bg-madeira-700 text-white font-bold py-3 px-8 rounded-full transition shadow-lg inline-flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> (67) 3351-1770
+                    </a>
+                    <a href="#produtos" class="bg-white text-nobre-800 hover:bg-gray-100 font-bold py-3 px-8 rounded-full transition shadow-lg">
+                        Ver Produtos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quem Somos / Sobre -->
+        <section id="sobre" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold text-center text-nobre-800 mb-12 section-title">Quem Somos</h3>
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Interior de uma loja de madeira e materiais de construção com tábuas e ferramentas" class="rounded-lg shadow-xl w-full h-80 object-cover">
+                    </div>
+                    <div class="text-gray-600 leading-relaxed space-y-4">
+                        <p>
+                            A <strong>Lojas Nobre</strong>, registrada sob a razão social <strong>Madenobre Madereira LTDA</strong> e CNPJ <strong>09.050.294/0001-30</strong>, é uma empresa solidamente estabelecida em Dourados, Mato Grosso do Sul. 
+                            Fundada em <strong>12/09/2007</strong>, construímos uma trajetória de quase duas décadas servindo construtores, marceneiros, profissionais da construção civil e clientes finais.
+                        </p>
+                        <p>
+                            Nossa atividade principal é o <strong>comércio varejista de madeira e artefatos</strong>. Ao longo dos anos, expandimos nossa atuação para atender de forma completa as necessidades do setor, oferecendo também ferragens, ferramentas e materiais de construção em geral.
+                        </p>
+                        <p>
+                            Administrada pelo sócio-administrador <strong>Jose Aparecido Pereira</strong>, a Lojas Nobre tem como pilares a qualidade dos produtos, a honestidade no atendimento e o compromisso com o desenvolvimento da região. Somos uma empresa com <strong>situação cadastral ativa</strong> e capital social registrado.
+                        </p>
+                        <ul class="space-y-2 text-sm">
+                            <li><i class="fas fa-check-circle text-madeira-500 mr-2"></i> <strong>Situação Cadastral:</strong> Ativa</li>
+                            <li><i class="fas fa-check-circle text-madeira-500 mr-2"></i> <strong>Data de Abertura:</strong> 12/09/2007</li>
+                            <li><i class="fas fa-check-circle text-madeira-500 mr-2"></i> <strong>Natureza Jurídica:</strong> Sociedade Empresária Limitada</li>
+                            <li><i class="fas fa-check-circle text-madeira-500 mr-2"></i> <strong>Porte:</strong> Micro Empresa</li>
+                            <li><i class="fas fa-check-circle text-madeira-500 mr-2"></i> <strong>Capital Social:</strong> R$ 10.000,00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produtos / Atividades -->
+        <section id="produtos" class="py-16 bg-nobre-50">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold text-center text-nobre-800 mb-12 section-title">Nossos Produtos e Serviços</h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="https://images.unsplash.com/photo-1611021061285-9f0c5b1c1c1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Madeira e artefatos de madeira" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-nobre-800 mb-2">Madeira e Artefatos</h4>
+                            <p class="text-gray-600 text-sm">
+                                Comércio varejista de madeira e artefatos (CNAE 47.44-0-02). Tábuas, vigas, compensados e diversos itens em madeira.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ferragens e ferramentas" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-nobre-800 mb-2">Ferragens e Ferramentas</h4>
+                            <p class="text-gray-600 text-sm">
+                                Comércio varejista de ferragens e ferramentas (CNAE 47.44-0-01). Parafusos, dobradiças, ferramentas manuais e elétricas.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Materiais de construção em geral" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-nobre-800 mb-2">Materiais de Construção</h4>
+                            <p class="text-gray-600 text-sm">
+                                Comércio varejista de materiais de construção em geral (CNAE 47.44-0-99). Tudo para sua obra em um só lugar.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Locação de mão de obra temporária" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-nobre-800 mb-2">Locação de Mão de Obra</h4>
+                            <p class="text-gray-600 text-sm">
+                                Locação de mão-de-obra temporária (CNAE 78.20-5-00). Suporte profissional para sua obra ou projeto.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold text-center text-nobre-800 mb-12 section-title">Fale Conosco</h3>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Informações de Contato -->
+                    <div class="space-y-6">
+                        <p class="text-gray-600 mb-4">
+                            Nossa equipe está à disposição para atender você. Entre em contato para consultar disponibilidade de produtos, preços e condições especiais para sua obra ou projeto.
+                        </p>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-nobre-100 p-3 rounded-full">
+                                <i class="fas fa-phone-alt text-madeira-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-nobre-800">Telefones</h4>
+                                <p class="text-gray-600">(67) 3351-1770</p>
+                                <p class="text-gray-600">(67) 3416-4600</p>
+                                <a href="tel:+556733511770" class="text-madeira-600 text-sm hover:underline">Ligar agora</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-nobre-100 p-3 rounded-full">
+                                <i class="fas fa-envelope text-madeira-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-nobre-800">E-mail</h4>
+                                <p class="text-gray-600">contato@orteco.com.br</p>
+                                <a href="mailto:contato@orteco.com.br" class="text-madeira-600 text-sm hover:underline">Enviar E-mail</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-nobre-100 p-3 rounded-full">
+                                <i class="fas fa-map-marker-alt text-madeira-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-nobre-800">Endereço</h4>
+                                <p class="text-gray-600">
+                                    Rua Coronel Ponciano de Mattos Pereira, 500<br>
+                                    Parque dos Jequitibas<br>
+                                    Dourados - MS, CEP: 79839-600
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-nobre-100 p-3 rounded-full">
+                                <i class="fas fa-user-tie text-madeira-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-nobre-800">Responsável</h4>
+                                <p class="text-gray-600">Jose Aparecido Pereira - Sócio-Administrador</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulário de Contato -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-inner">
+                        <h4 class="text-xl font-bold text-nobre-800 mb-4">Envie uma mensagem</h4>
+                        <form action="#" method="POST" class="space-y-4">
+                            <div>
+                                <label for="nome" class="block text-sm font-medium text-gray-700">Nome</label>
+                                <input type="text" id="nome" name="nome" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-madeira-500 focus:border-madeira-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+                                <input type="email" id="email" name="email" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-madeira-500 focus:border-madeira-500">
+                            </div>
+                            <div>
+                                <label for="telefone" class="block text-sm font-medium text-gray-700">Telefone</label>
+                                <input type="tel" id="telefone" name="telefone" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-madeira-500 focus:border-madeira-500">
+                            </div>
+                            <div>
+                                <label for="mensagem" class="block text-sm font-medium text-gray-700">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="4" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-madeira-500 focus:border-madeira-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-madeira-600 hover:bg-madeira-700 text-white font-bold py-2 px-4 rounded-md transition">
+                                Enviar Mensagem
+                            </button>
+                            <p class="text-xs text-gray-500 mt-2">Ao enviar, você concorda com nossa Política de Privacidade.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Localização -->
+        <section id="localizacao" class="py-16 bg-nobre-50">
+            <div class="container mx-auto px-4">
+                <h3 class="text-3xl font-bold text-center text-nobre-800 mb-12 section-title">Onde Estamos</h3>
+                <div class="bg-white p-4 rounded-lg shadow-md">
+                    <!-- Mapa Incorporado -->
+                    <div class="w-full h-80 bg-gray-200 rounded-md mb-4 overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3689.5!2d-54.8!3d-22.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDEyJzAwLjAiUyA1NMKwNDgnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1234567890"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Localização da Lojas Nobre em Dourados/MS">
+                        </iframe>
+                    </div>
+                    <div class="text-center text-gray-700">
+                        <p class="font-semibold text-lg">Lojas Nobre - Madenobre Madereira LTDA</p>
+                        <p>Rua Coronel Ponciano de Mattos Pereira, 500 - Parque dos Jequitibas</p>
+                        <p>Dourados - MS, CEP: 79839-600</p>
+                        <a href="https://maps.google.com/?q=Rua+Coronel+Ponciano+de+Mattos+Pereira+500+Dourados+MS" target="_blank" class="inline-block mt-3 text-madeira-600 hover:underline font-medium">
+                            <i class="fas fa-directions mr-1"></i> Abrir no Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Rodapé) -->
+    <footer class="bg-nobre-900 text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-nobre-300">Lojas Nobre</h4>
+                    <p class="text-sm text-gray-400">
+                        Madeira, ferragens, ferramentas e materiais de construção em Dourados/MS desde 2007. Qualidade e tradição para sua obra.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-nobre-300">Links Rápidos</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition">Início</a></li>
+                        <li><a href="#sobre" class="hover:text-white transition">Quem Somos</a></li>
+                        <li><a href="#produtos" class="hover:text-white transition">Produtos</a></li>
+                        <li><a href="#contato" class="hover:text-white transition">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-nobre-300">Informações Legais</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#politica-privacidade" class="hover:text-white transition">Política de Privacidade</a></li>
+                        <li><a href="#termos-servico" class="hover:text-white transition">Termos de Serviço</a></li>
+                        <li><a href="#politica-envio" class="hover:text-white transition">Política de Envio</a></li>
+                        <li><a href="#politica-devolucao" class="hover:text-white transition">Política de Devolução</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4 text-nobre-300">Dados da Empresa</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><strong>Razão Social:</strong> Madenobre Madereira LTDA</li>
+                        <li><strong>CNPJ:</strong> 09.050.294/0001-30</li>
+                        <li><strong>Sócio-Administrador:</strong> Jose Aparecido Pereira</li>
+                        <li><strong>Endereço:</strong> Rua Coronel Ponciano de Mattos Pereira, 500, Parque dos Jequitibas, Dourados/MS, CEP: 79839-600</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-6 text-center text-sm text-gray-500">
+                <p>&copy; 2026 Lojas Nobre - Madenobre Madereira LTDA. Todos os direitos reservados.</p>
+                <p class="mt-2">CNPJ: 09.050.294/0001-30 | Situação: Ativa | Fundada em 12/09/2007</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Seções de Políticas e Termos (Conteúdo completo para conformidade Google Ads e G2) -->
+    
+    <div id="politica-privacidade" class="container mx-auto px-4 py-12 text-sm text-gray-600">
+        <hr class="my-8 border-gray-300">
+        <h2 class="text-2xl font-bold text-nobre-800 mb-4">Política de Privacidade</h2>
+        <p class="mb-4">Última atualização: 24/09/2026</p>
+        <p class="mb-4">
+            A Lojas Nobre (Madenobre Madereira LTDA), CNPJ 09.050.294/0001-30, valoriza a sua privacidade. Esta política descreve como coletamos, usamos e protegemos suas informações pessoais quando você visita nosso site ou entra em contato conosco.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Coleta de Informações</h3>
+        <p class="mb-4">
+            Coletamos informações que você nos fornece voluntariamente através de nosso formulário de contato, telefone ou e-mail, como nome, e-mail, telefone e mensagem. Também podemos coletar dados de navegação anônimos (como endereço IP, tipo de navegador e páginas visitadas) para fins estatísticos e de melhoria do site.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Uso das Informações</h3>
+        <p class="mb-4">
+            Utilizamos suas informações para:
+            <ul class="list-disc ml-6 mb-4">
+                <li>Responder a suas solicitações, orçamentos e pedidos;</li>
+                <li>Melhorar nossos produtos, serviços e atendimento;</li>
+                <li>Enviar comunicações comerciais (caso você tenha consentido);</li>
+                <li>Cumprir obrigações legais e regulatórias.</li>
+            </ul>
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Compartilhamento de Dados</h3>
+        <p class="mb-4">
+            Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing sem o seu consentimento. Podemos compartilhar dados com prestadores de serviços essenciais (como transportadoras e processadores de pagamento) estritamente para concluir uma transação solicitada por você.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Seus Direitos (LGPD)</h3>
+        <p class="mb-4">
+            Em conformidade com a Lei Geral de Proteção de Dados (LGPD), você tem o direito de solicitar acesso, correção, portabilidade ou exclusão de seus dados pessoais. Para exercer esses direitos, entre em contato pelo e-mail contato@orteco.com.br.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Cookies</h3>
+        <p class="mb-4">
+            Nosso site pode usar cookies para melhorar sua experiência de navegação. Você pode desativar os cookies nas configurações do seu navegador, embora isso possa afetar a funcionalidade do site.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Segurança</h3>
+        <p class="mb-4">
+            Adotamos medidas técnicas e administrativas adequadas para proteger suas informações contra acessos não autorizados, perda ou alteração.
+        </p>
+    </div>
+
+    <div id="termos-servico" class="container mx-auto px-4 py-12 text-sm text-gray-600 bg-gray-100">
+        <h2 class="text-2xl font-bold text-nobre-800 mb-4">Termos de Serviço</h2>
+        <p class="mb-4">Última atualização: 24/09/2026</p>
+        <p class="mb-4">
+            Ao acessar e usar o site da Lojas Nobre, você concorda com os seguintes termos e condições:
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">1. Uso do Site</h3>
+        <p class="mb-4">
+            Este site é destinado à divulgação de nossos produtos e serviços e à comunicação com nossos clientes. Você concorda em usar o site apenas para fins legais e de maneira que não infrinja os direitos de terceiros.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">2. Propriedade Intelectual</h3>
+        <p class="mb-4">
+            Todo o conteúdo deste site, incluindo textos, imagens, logotipos e design, é de propriedade da Lojas Nobre ou de seus licenciadores e está protegido por leis de direitos autorais. É proibida a reprodução sem autorização prévia por escrito.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">3. Limitação de Responsabilidade</h3>
+        <p class="mb-4">
+            As informações contidas neste site são fornecidas "como estão". Embora nos esforcemos para manter as informações precisas e atualizadas, não garantimos a ausência de erros. A Lojas Nobre não se responsabiliza por danos diretos ou indiretos decorrentes do uso deste site.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">4. Links para Terceiros</h3>
+        <p class="mb-4">
+            Nosso site pode conter links para sites de terceiros (como Google Maps). Não somos responsáveis pelas práticas de privacidade ou conteúdo desses sites.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">5. Legislação Aplicável</h3>
+        <p class="mb-4">
+            Estes termos são regidos pelas leis brasileiras. Qualquer disputa será resolvida no foro da comarca de Dourados, Mato Grosso do Sul.
+        </p>
+    </div>
+
+    <div id="politica-envio" class="container mx-auto px-4 py-12 text-sm text-gray-600">
+        <h2 class="text-2xl font-bold text-nobre-800 mb-4">Política de Envio e Entrega</h2>
+        <p class="mb-4">
+            A Lojas Nobre realiza entregas de madeira, ferragens, ferramentas e materiais de construção em Dourados/MS e região. Para produtos de grande volume ou peso, consulte-nos previamente sobre disponibilidade e custo de frete.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Prazos e Custos</h3>
+        <p class="mb-4">
+            O prazo e o custo de entrega variam conforme a localização, o volume e o peso dos produtos. Essas informações serão fornecidas no momento da confirmação do pedido, por telefone ou e-mail.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Retirada na Loja</h3>
+        <p class="mb-4">
+            Clientes podem optar por retirar os produtos diretamente em nossa loja, localizada na Rua Coronel Ponciano de Mattos Pereira, 500, Parque dos Jequitibas, Dourados/MS. Recomendamos confirmar a disponibilidade do produto antes do deslocamento.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Rastreamento</h3>
+        <p class="mb-4">
+            Para pedidos com entrega, o acompanhamento pode ser feito através do contato direto conosco pelos telefones (67) 3351-1770 ou (67) 3416-4600.
+        </p>
+    </div>
+
+    <div id="politica-devolucao" class="container mx-auto px-4 py-12 text-sm text-gray-600 bg-gray-100">
+        <h2 class="text-2xl font-bold text-nobre-800 mb-4">Política de Devolução e Reembolso</h2>
+        <p class="mb-4">
+            Nosso compromisso é com a sua satisfação. Se você não estiver satisfeito com um produto adquirido, entre em contato conosco imediatamente para avaliarmos a situação.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Prazo para Desistência</h3>
+        <p class="mb-4">
+            Em conformidade com o Código de Defesa do Consumidor, o prazo para desistência de compras realizadas fora do estabelecimento comercial é de 7 dias corridos após o recebimento, desde que o produto esteja em sua embalagem original, sem sinais de uso ou danos.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Produtos com Defeito</h3>
+        <p class="mb-4">
+            Caso você receba um produto com defeito de fabricação ou diferente do solicitado, entre em contato em até 7 dias após o recebimento. Faremos a troca ou o reembolso conforme sua preferência e disponibilidade em estoque.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Como Solicitar</h3>
+        <p class="mb-4">
+            Para solicitar uma devolução ou troca, entre em contato pelos telefones (67) 3351-1770 / (67) 3416-4600 ou e-mail contato@orteco.com.br, informando o número do pedido (se houver) e o motivo da solicitação. Analisaremos seu caso e forneceremos as instruções necessárias.
+        </p>
+        <h3 class="text-lg font-semibold text-nobre-700 mt-4 mb-2">Reembolso</h
